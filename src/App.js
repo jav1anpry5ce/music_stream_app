@@ -22,7 +22,7 @@ function App() {
       <div className="relative flex h-full gap-4 overflow-hidden">
         <Sidebar />
         {loading ? (
-          <div className="absolute left-[50%] top-[50%] translate-y-[-100%]">
+          <div className="absolute left-[55%] top-[50%] translate-y-[-100%]">
             <BounceLoader color="#fff" />
           </div>
         ) : (
