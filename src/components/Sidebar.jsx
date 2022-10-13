@@ -12,7 +12,7 @@ export default function Sidebar() {
       height: "100%",
     },
     animate: {
-      height: 893,
+      height: "calc(100vh - 116px)",
     },
   };
   if (!mobile)
@@ -22,7 +22,7 @@ export default function Sidebar() {
         initial={currentTrack ? "animate" : "initial"}
         animate={currentTrack ? "animate" : "initial"}
         transition={{
-          duration: 0.6,
+          duration: 0.5,
           ease: "linear",
         }}
         className="absolute top-0 left-0 bottom-0 z-20 w-[18rem] bg-gradient-to-tr from-[#10084f] to-[#3c002c] text-white"
