@@ -30,7 +30,7 @@ export default function MiniPlayer() {
       variants={main}
       initial={currentTrack ? "animate" : "initial"}
       animate={currentTrack ? "animate" : "initial"}
-      className="absolute bottom-0 z-50 w-[100%] overflow-hidden bg-transparent p-4 backdrop-blur-lg"
+      className="absolute bottom-0 w-[100%] overflow-hidden bg-transparent p-4 backdrop-blur-lg"
       transition={{
         duration: 0.5,
         ease: "easeInOut",
