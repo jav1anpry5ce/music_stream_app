@@ -16,8 +16,8 @@ export default function Cards({ track }) {
   };
 
   return (
-    <div
-      className={`group flex h-auto w-[45%] cursor-pointer flex-col items-center justify-center gap-3 p-2 text-white hover:rounded-lg hover:bg-white/10 lg:w-[16rem] ${
+    <button
+      className={`group flex h-auto w-[45%] cursor-pointer flex-col items-center justify-center gap-3 rounded-lg p-2 text-white outline-none hover:bg-white/10 focus:bg-white/10 lg:w-[16rem] ${
         currentTrack === track && "rounded-lg bg-white/10"
       }`}
       onClick={handlePlay}
@@ -31,7 +31,7 @@ export default function Cards({ track }) {
           alt="cover"
           className="w-[85%] rounded-lg lg:h-52 lg:w-52"
         />
-        <div className="absolute left-[50%] top-[50%] m-0 hidden translate-x-[-50%] rounded-full bg-black/50 p-2 group-hover:block">
+        <div className="absolute left-[50%] top-[50%] m-0 hidden translate-x-[-50%] rounded-full bg-black/50 p-2 group-hover:block group-focus:block">
           {currentTrack === track && playing ? (
             <FaPause fontSize={20} />
           ) : (
@@ -47,6 +47,6 @@ export default function Cards({ track }) {
           {track.subtitle}
         </p>
       </div>
-    </div>
+    </button>
   );
 }
