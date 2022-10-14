@@ -39,11 +39,13 @@ export default function Cards({ track }) {
           )}
         </div>
       </div>
-      <div className="text-center">
-        <p className="text-sm font-bold lg:text-base lg:leading-none">
+      <div className="w-full text-ellipsis text-center">
+        <p className="truncate text-center text-sm font-bold lg:text-base lg:leading-none">
           {track.title}
         </p>
-        <p className="text-xs text-gray-400 lg:text-sm">{track.subtitle}</p>
+        <p className="truncate text-xs text-gray-400 lg:text-sm">
+          {track.subtitle}
+        </p>
       </div>
     </div>
   );
