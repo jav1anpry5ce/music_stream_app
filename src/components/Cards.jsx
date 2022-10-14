@@ -40,7 +40,7 @@ export default function Cards({ track }) {
         </div>
       </div>
       <div className="w-full text-ellipsis text-center">
-        <p className="truncate text-center text-sm font-bold lg:text-base lg:leading-none">
+        <p className="truncate text-center text-sm font-bold lg:text-base lg:leading-5">
           {track.title}
         </p>
         <p className="truncate text-xs text-gray-400 lg:text-sm">
