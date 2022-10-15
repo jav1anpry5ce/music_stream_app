@@ -8,26 +8,23 @@ export default function Playback() {
     React.useContext(Context);
 
   return (
-    <div className="group relative flex w-full flex-col items-center justify-center">
-      <div className="flex w-full items-center gap-3">
-        <p>{format(currentTime * 1000)}</p>
-        <div className="relative m-0 -mt-0.5 w-full p-0 leading-none">
-          <motion.input
-            id="track"
-            type="range"
-            value={seekValue}
-            onChange={(e) => {
-              setSeekValue(e.target.value);
-              const seekto =
-                playerRef.current.duration * (+e.target.value / 100);
-              playerRef.current.currentTime = seekto;
-            }}
-            // className="h-[5px] w-full appearance-none rounded-full bg-gray-500/50 transition-all duration-300 ease-in-out"
-            className="h-[6px] w-full cursor-pointer rounded-full"
-          />
-        </div>
-        <p>{format(currentTime * 1000 - duration * 1000)}</p>
-      </div>
+    <div className="flex w-full items-center justify-center gap-3">
+      <p>{format(currentTime * 1000)}</p>
+      <motion.input
+        id="track"
+        type="range"
+        min={0}
+        max={100}
+        step="any"
+        value={seekValue}
+        onChange={(e) => {
+          setSeekValue(e.target.value);
+          const seekto = playerRef.current.duration * (+e.target.value / 100);
+          playerRef.current.currentTime = seekto;
+        }}
+        className="mt-0.5 h-[6px] w-full cursor-pointer rounded-full bg-transparent"
+      />
+      <p>{format(currentTime * 1000 - duration * 1000)}</p>
     </div>
   );
 }
