@@ -8,8 +8,8 @@ export default function Search() {
   const [text, setText] = React.useState("");
   const ref = React.useRef(null);
   const clearSearch = () => {
-    ref.current.search.value = "";
-    setText(null);
+    ref.current.reset();
+    setText("");
     ref.current.search.focus();
   };
 
