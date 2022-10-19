@@ -27,16 +27,16 @@ export default function Search() {
         <input
           name="search"
           placeholder="Song Search..."
-          className="w-full appearance-none overflow-hidden bg-transparent p-2 text-white outline-none"
+          className="appearance-none overflow-hidden bg-transparent p-2 text-white outline-none"
           onChange={(e) => setText(e.target.value)}
         />
         {text && (
           <button
-            className="absolute right-14 top-[10%] hidden rounded-full bg-slate-500/10 p-2 transition-all duration-200 ease-in-out hover:bg-red-600 group-focus-within:block"
+            className="absolute right-14 top-[50%] translate-y-[-50%] rounded-full bg-slate-500/10 p-2 transition-all duration-200 ease-in-out hover:bg-red-600 group-focus-within:block"
             type="button"
             onClick={clearSearch}
           >
-            <AiOutlineClose />
+            <AiOutlineClose fontSize={10} />
           </button>
         )}
         <button type="submit" className="overflow-hidden bg-gray-900 px-4">
