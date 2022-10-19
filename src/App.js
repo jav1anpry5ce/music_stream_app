@@ -40,6 +40,11 @@ function App() {
               : tracks.map((track, index) => (
                   <Cards key={index} track={track} />
                 ))}
+            {tracks.length === 0 && !loading && (
+              <p className="absolute left-[48%] text-2xl font-bold uppercase text-white">
+                Something went wrong!
+              </p>
+            )}
           </div>
         )}
       </div>

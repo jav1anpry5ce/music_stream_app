@@ -27,7 +27,7 @@ export default function Search() {
         <input
           name="search"
           placeholder="Song Search..."
-          className="appearance-none overflow-hidden bg-transparent p-2 text-white outline-none"
+          className="w-full appearance-none overflow-hidden bg-transparent p-2 text-white outline-none"
           onChange={(e) => setText(e.target.value)}
         />
         {text && (

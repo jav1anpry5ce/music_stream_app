@@ -79,9 +79,13 @@ const Provider = ({ children }) => {
         "X-RapidAPI-Host": "shazam-core.p.rapidapi.com",
       },
     };
-    const { data } = await axios.get("/charts/genre-world", options);
-    setTracks(data);
-    setLoading(false);
+    try {
+      const { data } = await axios.get("/charts/genre-world", options);
+      setTracks(data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   const searchTrack = async (search) => {
